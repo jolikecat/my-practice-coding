@@ -1,0 +1,334 @@
+// 共通 
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family:  'Montserrat', YuGothic,'Yu Gothic',sans-serif;
+}
+img {
+  width: 100%;
+}
+.sm-title {
+  font-size: 3.2rem;
+  line-height: 1.21875;
+  letter-spacing: .068em;
+} 
+.sm-text {
+  font-size: 1.6rem;
+  margin-top: 30px;
+  line-height: 2.0;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.sub-title {
+  font-size: 2.4rem;
+  margin-top: 30px;
+  letter-spacing: .005em;
+}
+.bg-gray {
+  background-color: #F0F0F0;
+}
+// ヘッダー
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.header__inner {
+  display: flex;
+  margin: 30px 4vw;
+}
+.logo__svg {
+  width: calc(189px + ((1vw - 7.68px) * 10.5655));
+}
+.logo__svg.black path {
+  fill: #333;
+  transition: fill .3s;
+}
+.nav-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba($color: #222, $alpha: .95);
+  width: 100vw;
+  max-width: 520px;
+  height: 100vh;
+  z-index: 2;
+}
+.nav {
+  margin: 180px auto auto auto;
+  &__logo {
+    width: 60px;
+    margin: 0 auto;
+  }
+  &__list {
+    margin-top: 40px;
+    text-align: center;
+  }
+  &__item {
+    margin-top: 30px;
+  }
+  &__link {
+    color: #fff;
+    font-size: 2.0rem;
+    letter-spacing: .068em;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+.burger-btn.black .bar{
+  background-color: #333;
+  transition: background-color .3s;
+}
+.burger-btn.black .menu{
+  color: #333;
+  transition: color .3s;
+}
+.burger-btn{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 38px;
+  right: 4vw;
+  z-index: 3;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+}
+.bar{
+  display: block;
+  background-color: #fff;
+  height: 2px;
+  width: 22px;
+  border-radius: 1px;
+}
+.bar_top{
+  transform: translateY(-4px);
+  transition: transform .3s;
+}
+.bar_bottom{
+  transform: translateY(4px);
+  transition: transform .3s;
+}
+.burger-btn.close .bar_top{      
+  transform: translateY(1px) rotate(30deg);      
+  transition: transform .3s;    
+}    
+.burger-btn.close .bar_mid{      
+  opacity: 0;       
+  transition: opacity .3s;    
+}    
+.burger-btn.close .bar_bottom{      
+transform: translateY(-3px) rotate(-30deg);      
+transition: transform .3s;    
+}
+.burger-btn.close .bar {
+  background-color: #fff;
+}
+.burger-btn.close .menu {
+  color: #fff;
+}
+.mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #222, $alpha: .6);
+  z-index: -1;
+}
+.menu{
+  display: block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 5px;
+}
+// ファーストビュー
+.fv {
+  width: 100vw;
+  height: calc(615px + ((1vw - 7.68px) * -22.4702));
+  position: relative;
+  background: linear-gradient(to right, #fff 0%, #fff 50%, #222 50%, #222 100%);
+
+  &__img {
+    width: 76.388%;
+    height: calc(529px + ((1vw - 7.68px) * -21.131));
+    background: url("../img/heading-img_about.jpg") no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+
+  &__inner {
+    position: absolute;
+    top: 33.62%;
+    right: 11.805%;
+  }
+
+  &__title {
+    color: #fff;
+    line-height: 1.4;
+    font-size: calc(1.6rem + ((1vw - 7.68px) * 0.5952));
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    letter-spacing: .005em;
+    strong {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: calc(5.6rem + ((1vw - 7.68px) * 2.381));;
+      line-height: 1.2;
+      letter-spacing: .063em;
+    }
+  }
+}
+// VISION 
+.vision {
+  width: 92vw;
+  max-width: 415px;
+  margin:  auto;
+  padding-top: 120px;
+  padding-right: calc(1px + ((1vw - 3.75px) * 7.4178));
+}
+// MESSAGE 
+.message-area {
+  width: 92.187vw;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 120px;
+}
+.message-area__img {
+  width: calc(320px + ((1vw - 7.68px) * 14.881));
+}
+.message-wrapper {
+  margin: -85px 0 0 auto;
+  max-width: 770px; 
+  width: percentage(494/768);
+  min-width: 345px;
+}
+.message {
+  width: percentage( 400 / 494);
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 120px;
+  padding-bottom: 90px;
+}
+// COMPANY 
+.company {
+  width: 91.145vw;
+  max-width: 1100px;
+  margin: 120px auto;
+}
+.company__map-wrapper {
+  margin-top: 40px;
+}
+.company__map {
+  width: 100%;
+  height: 360px;
+}
+.table {
+  margin-top: 30px;
+  overflow: hidden;
+  border-top: 1px solid #DDDDDD;
+  &__inner {
+    width: 800px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  &__row {
+    border-bottom: 1px solid #DDDDDD;
+  }
+  &__header {
+    padding: 20px 0;
+    text-align: left;
+    width: 18%;
+  }
+}
+// FOOTER  
+.footer {
+  background-color: #525252;
+  display: grid;
+  place-items: center;
+  height: 50px;
+}
+.copyright {
+  color: #fff;
+  font-size: 1.0rem;
+  letter-spacing: .015em;
+  font-weight: 600;
+}
+// PC 
+@media screen and (min-width: 1440px) {
+  .logo__svg {
+    width: 260px;
+  }
+  .fv {
+    height: 464px;
+  }
+  .fv__img {
+    height: 387px;
+  }
+  .fv__txt {
+    font-size: 2.0rem;
+    strong {
+      font-size: 7.2rem;
+    }
+  }
+  .message-area__img {
+    width: 420px;
+  }
+}
+// タブレット
+@media screen and (max-width: 768px) {
+  .fv {
+    height: calc(449px + ((1vw - 3.75px) * 42.2392));
+  }
+  .fv__img {
+    height: calc(387px + ((1vw - 3.75px) * 36.1323));
+  }
+  .fv__txt {
+    letter-spacing: .063em;
+  }
+  .fv__inner {
+    top: 32.772%;
+    right: 12.760%;
+  }
+  .logo__svg {
+    width: 189px;
+  }
+  .vision {
+    .sm-text {
+      font-size: 1.4rem;
+    }
+  }
+  .message-area__img {
+    width: calc(320px + ((1vw - 3.75px) * -5.0891));
+  }
+}
+// スマホ
+@media screen and (max-width: 375px) {
+  .fv {
+    height: 449px;
+  }
+  .fv__img {
+    height: 387px;
+  }
+  .fv__inner {
+    top: 33.184%;
+    right: 7.733%;
+  }
+  .vision {
+    padding-right: 0px;
+  }
+  .message-area__img {
+    margin-left: -3.9vw;
+  }
+  .message {
+    width: 288px;
+  }
+}
